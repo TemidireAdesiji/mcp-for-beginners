@@ -2,19 +2,18 @@
 
 This is the Rust solution for the LLM client sample. You need a Rust toolchain installed; see the [official install guide](https://www.rust-lang.org/tools/install).
 
-The client calls a model through the GitHub Models inference endpoint (`https://models.github.ai/inference/chat`) and reads your token from the `OPENAI_API_KEY` environment variable.
+The client calls a model through the GitHub Models inference endpoint (`https://models.github.ai/inference/chat`) and reads your GitHub personal access token (PAT) from the `OPENAI_API_KEY` environment variable.
 
-## -0- Set your API key
+> [!NOTE]
+> Other solutions in this repo use `GITHUB_TOKEN`. For Rust, set `OPENAI_API_KEY` to the same value to match the OpenAI client configuration.
 
-```bash
-# zsh/bash
-export OPENAI_API_KEY="{{YOUR_GITHUB_TOKEN}}"
-```
+## -0- Set your GitHub token
 
-```powershell
-# PowerShell
-$env:OPENAI_API_KEY = "{{YOUR_GITHUB_TOKEN}}"
-```
+    # zsh/bash
+    export OPENAI_API_KEY="{{YOUR_GITHUB_PAT}}"
+
+    # PowerShell
+    $env:OPENAI_API_KEY = "{{YOUR_GITHUB_PAT}}"
 
 ## -1- Build the sample
 
